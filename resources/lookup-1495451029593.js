@@ -1,0 +1,59 @@
+(function(window, undefined) {
+  var dictionary = {
+    "0bcc677f-fa66-491a-a87b-496990505f39": "Process_time_page",
+    "a866eb13-e42b-4376-b70b-b8a235a586eb": "Quatation_List_page",
+    "9057d47d-fe9f-489d-b7da-5203f1ee3c5d": "Quatation_List_page_fault",
+    "3b764674-28d1-4a78-87d3-8172f4cf6cae": "order_detail_page_sigle_verify_not_pass",
+    "dfd22018-07a3-4ac5-9da2-e526fe252d4d": "order_detail_page_fault_detail",
+    "94a04249-ed59-41a2-a99c-b862291cac85": "Patial_page",
+    "eb968331-16ee-432c-9432-3ed1b0ff3f75": "Error_page",
+    "d1659409-02c0-452e-b630-761a40d5185e": "Dashboard_page",
+    "d12245cc-1680-458d-89dd-4f0d7fb22724": "Berlin_frame",
+    "4e300cef-a2d5-4150-a0a8-c98e1db275ed": "completed_page",
+    "c1101993-bf8a-4ac5-a768-dd6dd929670e": "Dashboard_page_sort_saleman",
+    "23a627c1-1f1c-4bf4-8f14-d160c8464645": "Report_verify_page",
+    "45117394-80b4-4f59-a8cd-d186138b5605": "Customer_info_page",
+    "b2527973-9d8f-4561-b899-105ee283ec16": "Order_list_page",
+    "bcc1eddc-c6fe-47b5-96a9-b934e0578f88": "closed_page",
+    "4c7b41a0-6f3f-4197-989c-20b38bf110a2": "order_detail_page_sigle_verify_pass",
+    "8f28f997-9c8f-4695-9f5b-daf1052a92e1": "Patial_details_page",
+    "ca15297d-ab1e-4baa-a2d6-f603b0082f52": "Report_result_page",
+    "c597e556-d23f-4018-8a6a-9a05bf877988": "Cancel_page",
+    "5432bdd2-d2f0-4a95-b77b-7fc7e6b647f6": "profile_page",
+    "b8e2c867-c49a-4554-a12c-7bc416e4fe48": "Report_page",
+    "5a110298-7b6a-4eb9-9b84-04528b1533c4": "Dashboard_page_sort_name",
+    "5b3be874-8776-4ef1-91e1-e32a12d1633f": "Rejected_page",
+    "8346ab93-6f48-436e-acf1-3467f7cc7b16": "Approved_page",
+    "5c2e7981-ff44-4466-afcc-b9f702bf8f37": "Credit_hold_page",
+    "f39803f7-df02-4169-93eb-7547fb8c961a": "Berlin",
+    "87db3cf7-6bd4-40c3-b29c-45680fb11462": "960 grid - 16 columns",
+    "e5f958a4-53ae-426e-8c05-2f7d8e00b762": "960 grid - 12 columns",
+    "6450bb98-8fc2-4661-b1f8-dd3fbf1bbecb": "menu_berlin",
+    "931959dc-1327-4e88-872f-4fcef6253717": "table",
+    "d00a4a3b-ff02-43bc-8e9b-acf9d9b415db": "verify_loading",
+    "bb8abf58-f55e-472d-af05-a7d1bb0cc014": "default"
+  };
+
+  var uriRE = /^(\/#)?(screens|templates|masters|scenarios)\/(.*)(\.html)?/;
+  window.lookUpURL = function(fragment) {
+    var matches = uriRE.exec(fragment || "") || [],
+        folder = matches[2] || "",
+        canvas = matches[3] || "",
+        name, url;
+    if(dictionary.hasOwnProperty(canvas)) { /* search by name */
+      url = folder + "/" + canvas;
+    }
+    return url;
+  };
+
+  window.lookUpName = function(fragment) {
+    var matches = uriRE.exec(fragment || "") || [],
+        folder = matches[2] || "",
+        canvas = matches[3] || "",
+        name, canvasName;
+    if(dictionary.hasOwnProperty(canvas)) { /* search by name */
+      canvasName = dictionary[canvas];
+    }
+    return canvasName;
+  };
+})(window);

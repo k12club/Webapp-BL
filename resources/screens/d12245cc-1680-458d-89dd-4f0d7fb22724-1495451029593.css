@@ -1,0 +1,30 @@
+#s-d12245cc-1680-458d-89dd-4f0d7fb22724 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-d12245cc-1680-458d-89dd-4f0d7fb22724 > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 1200px;
+}
+#s-d12245cc-1680-458d-89dd-4f0d7fb22724 #s-Master_item_1 div.offset {
+  position: relative;
+  top: -133px;
+  left: -114px;
+}
+#s-d12245cc-1680-458d-89dd-4f0d7fb22724 #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1366px;
+  height: 1200px;
+  overflow: visible;
+}
+#s-d12245cc-1680-458d-89dd-4f0d7fb22724 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}
